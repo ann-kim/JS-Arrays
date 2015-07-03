@@ -85,9 +85,21 @@ var odds = [];
 //Have divider return an Array with the first item in the array being the evens array (all the even values from nums) and the second item in the Array being the odds array(all the odd values from nums).
 
   //Code Here
-function divider(nums, evens, odds) {
-  
+var divider = function(nums, evens, odds) {
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 !== 0) {
+      odds.push(nums[i]);
+    } else {
+      evens.push(nums[i]);
+    }
+  }
+  var sum = [];
+  sum.push(evens);
+  sum.push(odds);
+  return sum;
 }
+
+divider(nums, evens, odds);
 
 
 //Next Problem
@@ -97,10 +109,22 @@ var getRandomArbitrary = function() {
   return Math.floor(Math.random() * (30 - 0) + 0);
 }
 var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
-//Above you're given a function that will return a random number between 0 and 30, and an array full or numbers. Your job is to write a function named finder that will get a random number, then loop through the array to see if that random number is in the array. If it is, return true, if it's not, return false
+//Above you're given a function that will return a random number between 0 and 30, and an array full of numbers. Your job is to write a function named finder that will get a random number, then loop through the array to see if that random number is in the array. If it is, return true, if it's not, return false
 
   //Code Here
+var finder = function(arr) {
+  var randomNum = getRandomArbitrary();
+  console.log(randomNum);
+  var result;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === randomNum) {
+      return true;
+    }
+  }
+  return false;
+}
 
+finder(numbers);
 
 //Next problem
 
@@ -110,7 +134,14 @@ var str = 'this is my sentence';
 //Write a function called reverse that takes is given str as it's only argument and returns that string after it's been reversed
 
   //Code Here
+var reverse = function(string) {
+    var newString = str.split("");
+    newString.reverse();
+    var done = newString.join("");
+    return done;
+}
 
+reverse(str);
 
 //Next Problem
 
