@@ -64,15 +64,16 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
   //Code Here
-function evenFinder(arry) {
-  for (var i = 0; i < arry.length - 1; i++) {
+var evenFinder = function(arry) {
+  for (var i = 0; i < arry.length; i++) {
     if (arry[i] % 2 !== 0) {
-      delete arry[i];
+      arry.splice(i, 1);
+      i--;
     }
   }
+  return arry;
 }
 
-console.log(evenFinder(nums));
 
 //Next problem
 
