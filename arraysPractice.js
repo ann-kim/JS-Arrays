@@ -165,6 +165,24 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
+var removeItem = function(groceryList, item) {
+  for (var i = 0; i < groceryList.length; i++) {
+    if (groceryList[i] === item) {
+      groceryList.splice(i, 1);
+    }
+  }
+  return groceryList;
+}
+
+removeItem(myGroceryList, "pizza");
+
+
+var addItem = function(groceryList, item) {
+  groceryList.push(item);
+  return groceryList;
+}
+
+addItem(myGroceryList, "Jerky");
 
 
 //Next Problem
@@ -174,8 +192,15 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
   //Code Here
+var maker = function() {
+  var arry = [];
+  for (var i = 1; i < 216; i++) {
+    arry.push(i);
+  }
+  return arry;
+}
 
-
+maker();
 
 //Next Problem
 
@@ -185,8 +210,17 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
   //Code Here
+var addTen = function(nums) {
+  var arry = [];
+  for (var i = 0; i < nums.length; i++) {
+    var makeNum = Number(nums[i]);
+    var adding = makeNum + 10;
+    arry.push(adding);
+  }
+  return arry;
+}
 
-
+addTen(numbers);
 
 //Next Problem
 
