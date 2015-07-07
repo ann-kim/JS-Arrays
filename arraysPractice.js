@@ -401,12 +401,11 @@ Once you find the particular indice he's located in, delete him from the array.*
 
   //Code Here
 for (var i = 0; i < users.length; i++) {
-  for (key in users[i]) {
-    if (key === 'tylermcginnis33@gmail.com') {
+  if (users[i].email === 'tylermcginnis33@gmail.com') {
       users.splice(i, 1);
-    }
   }
 }
 
+users;
 
 //The activity we just did is very much how data works in 'the real world'.
