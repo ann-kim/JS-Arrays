@@ -307,18 +307,24 @@ array with those four objects. After that console.log the length of the Array an
 sure that it's equal to 4. */
 
   //Code Here
+devMountainEmployees.push(tyler);
+devMountainEmployees.push(cahlan);
+devMountainEmployees.push(ryan);
+devMountainEmployees.push(colt);
+
 
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absense to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
   //Code Here
-
-
+for (var i = 0; i < devMountainEmployees.length; i++) {
+  if (devMountainEmployees[i] === cahlan) {
+    devMountainEmployees.splice(i, 1);
+  }
+}
 
 
 //NEXT PROBLEM
-
-
 
 
 /*Now we're going to combine what we've learned today (objects) with what we learned
@@ -346,14 +352,14 @@ var data = [
     }
 ];
 
-
-
 /*A very clean way to pass around large LISTS (arrays) of COLLECTIONS (objects)
 of Data is to have an Array full of objects. */
 
 //Create an empty array called users.
 
   //Code Here
+var users = [];
+
 
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
@@ -367,6 +373,23 @@ var user1 = {
 }
 
 //Your Code Here
+var user2 = {
+  name: 'William Wallace',
+  email: 'scotlandforever@gmail.com',
+  password: 'sweetfreedom',
+  username: 'ihatelongshanks'
+}
+
+var user3 = {
+  name: 'Bruce Wayne',
+  email: 'thebatman@gmail.com',
+  password: 'darkness_noparents',
+  username: 'darkknight'
+}
+
+users.push(user1);
+users.push(user2);
+users.push(user3);
 
 /*Now you have a very common data structure. Twitter is a good use case.
 It's easy to imagine that your followers list on Twitter is an Array full or objects
@@ -377,5 +400,13 @@ objects until you find Tyler's account (use tylermcginnis33@gmail.com to find hi
 Once you find the particular indice he's located in, delete him from the array.*/
 
   //Code Here
+for (var i = 0; i < users.length; i++) {
+  for (key in users[i]) {
+    if (key === 'tylermcginnis33@gmail.com') {
+      users.splice(i, 1);
+    }
+  }
+}
+
 
 //The activity we just did is very much how data works in 'the real world'.
