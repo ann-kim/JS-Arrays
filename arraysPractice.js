@@ -273,9 +273,6 @@ longer(arr1, arr2);
 
 //NEXT PROBLEM
 
-
-
-
 var devMountainEmployees = [];
 
 var tyler = {
